@@ -44,3 +44,5 @@ const arr1 = [5, 3, 8, 4, 9, 1, 6, 2, 7];
 const arr2 = [5, 1, 1, 2, 0, 0];
 console.log(quickSort(arr1));
 console.log(quickSort(arr2));
+
+// 참고: https://velog.io/@sonaky47/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%ED%80%B5%EC%A0%95%EB%A0%AC-quick-sort
