@@ -1,4 +1,5 @@
 const INF = Number.POSITIVE_INFINITY; // 양의 무한대
+
 const graph = [
   [0, 2, 5, 1, INF, INF],
   [2, 0, 3, 2, INF, INF],

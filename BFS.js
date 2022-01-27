@@ -11,6 +11,7 @@ const graph = {
   J: ['I']
 };
 
+
 const bfs = (graph, startNode) => {
   let visited = []; // 탐색을 마친 노드들
   let needVisit = []; // 탐색해야할 노드들
