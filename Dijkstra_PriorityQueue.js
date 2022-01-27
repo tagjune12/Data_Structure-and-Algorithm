@@ -1,7 +1,3 @@
-function compare(a, b) {
-  return a['cost'] - b['cost'];
-}
-
 const graph = [
   [],
   [{ node: 2, cost: 2 }, { node: 3, cost: 5 }, { node: 4, cost: 1 }],
@@ -11,6 +7,10 @@ const graph = [
   [{ node: 3, cost: 1 }, { node: 4, cost: 1 }, { node: 6, cost: 2 }],
   [{ node: 3, cost: 5 }, { node: 5, cost: 2 }]
 ];
+
+function compare(a, b) {
+  return a['cost'] - b['cost'];
+}
 
 function dijkstra(start) {
   let distance = Array(graph.length).fill(Number.POSITIVE_INFINITY);
@@ -22,6 +22,8 @@ function dijkstra(start) {
 
   while (queue.length > 0) {
     const { node: curNode, cost } = queue.shift();
+
+    if (distance[curNode] < cost) continue;
 
     graph[curNode].forEach((value) => {
       const { node: nextNode, cost: nextCost } = value;
@@ -37,3 +39,4 @@ function dijkstra(start) {
 };
 
 console.log("최단경로:", dijkstra(1));
+// https://devfunny.tistory.com/641
